@@ -1,46 +1,72 @@
 <template>
-  <div class="space-y-6 bg-white text-black dark:bg-black dark:text-white p-4 rounded">
+  <div
+    class="space-y-6 bg-white text-black dark:bg-black dark:text-white p-4 rounded">
     <!-- Font Awesome CDN 추가 -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
 
-    <h1 class="text-3xl font-bold text-gray-800 dark:text-white">관리자 대시보드</h1>
+    <h1 class="text-3xl font-bold text-gray-800 dark:text-white">
+      관리자 대시보드
+    </h1>
 
     <!-- 통계 카드 -->
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
-      <div class="bg-white dark:bg-gray-800 rounded-lg shadow p-4 md:p-6 hover:shadow-lg transition-shadow">
+      <div
+        class="bg-white dark:bg-gray-800 rounded-lg shadow p-4 md:p-6 hover:shadow-lg transition-shadow">
         <div class="flex items-center">
-          <div class="p-3 rounded-full bg-blue-100 dark:bg-blue-900 text-blue-600 dark:text-blue-300">
+          <div
+            class="p-3 rounded-full bg-blue-100 dark:bg-blue-900 text-blue-600 dark:text-blue-300">
             <i class="fas fa-calendar-check text-xl md:text-2xl"></i>
           </div>
           <div class="ml-4">
-            <h3 class="text-sm font-medium text-gray-500 dark:text-gray-400">전체 예약</h3>
-            <p class="text-xl md:text-2xl font-semibold text-gray-800 dark:text-white">120</p>
+            <h3 class="text-sm font-medium text-gray-500 dark:text-gray-400">
+              전체 예약
+            </h3>
+            <p
+              class="text-xl md:text-2xl font-semibold text-gray-800 dark:text-white">
+              120
+            </p>
             <span class="text-sm text-green-600 dark:text-green-400">+12%</span>
           </div>
         </div>
       </div>
 
-      <div class="bg-white dark:bg-gray-800 rounded-lg shadow p-4 md:p-6 hover:shadow-lg transition-shadow">
+      <div
+        class="bg-white dark:bg-gray-800 rounded-lg shadow p-4 md:p-6 hover:shadow-lg transition-shadow">
         <div class="flex items-center">
-          <div class="p-3 rounded-full bg-green-100 dark:bg-green-900 text-green-600 dark:text-green-300">
+          <div
+            class="p-3 rounded-full bg-green-100 dark:bg-green-900 text-green-600 dark:text-green-300">
             <i class="fas fa-users text-xl md:text-2xl"></i>
           </div>
           <div class="ml-4">
-            <h3 class="text-sm font-medium text-gray-500 dark:text-gray-400">전체 사용자</h3>
-            <p class="text-xl md:text-2xl font-semibold text-gray-800 dark:text-white">50</p>
+            <h3 class="text-sm font-medium text-gray-500 dark:text-gray-400">
+              전체 사용자
+            </h3>
+            <p
+              class="text-xl md:text-2xl font-semibold text-gray-800 dark:text-white">
+              50
+            </p>
             <span class="text-sm text-green-600 dark:text-green-400">+5%</span>
           </div>
         </div>
       </div>
 
-      <div class="bg-white dark:bg-gray-800 rounded-lg shadow p-4 md:p-6 hover:shadow-lg transition-shadow">
+      <div
+        class="bg-white dark:bg-gray-800 rounded-lg shadow p-4 md:p-6 hover:shadow-lg transition-shadow">
         <div class="flex items-center">
-          <div class="p-3 rounded-full bg-yellow-100 dark:bg-yellow-900 text-yellow-600 dark:text-yellow-300">
+          <div
+            class="p-3 rounded-full bg-yellow-100 dark:bg-yellow-900 text-yellow-600 dark:text-yellow-300">
             <i class="fas fa-star text-xl md:text-2xl"></i>
           </div>
           <div class="ml-4">
-            <h3 class="text-sm font-medium text-gray-500 dark:text-gray-400">평균 평점</h3>
-            <p class="text-xl md:text-2xl font-semibold text-gray-800 dark:text-white">4.8</p>
+            <h3 class="text-sm font-medium text-gray-500 dark:text-gray-400">
+              평균 평점
+            </h3>
+            <p
+              class="text-xl md:text-2xl font-semibold text-gray-800 dark:text-white">
+              4.8
+            </p>
             <span class="text-sm text-green-600 dark:text-green-400">+0.2</span>
           </div>
         </div>
@@ -48,14 +74,21 @@
     </div>
 
     <!-- 예약 현황 -->
-    <div class="bg-white dark:bg-gray-800 rounded-lg shadow text-gray-700 dark:text-gray-300">
+    <div
+      class="bg-white dark:bg-gray-800 rounded-lg shadow text-gray-700 dark:text-gray-300">
       <!-- 검색 필터 -->
       <div class="p-4 border-b border-gray-200 dark:border-gray-700">
-        <div class="flex flex-col space-y-4 md:space-y-0 md:flex-row md:items-center md:justify-between md:space-x-4">
+        <div
+          class="flex flex-col space-y-4 md:space-y-0 md:flex-row md:items-center md:justify-between md:space-x-4">
           <!-- 날짜 선택 -->
-          <div class="flex flex-col space-y-2 md:space-y-0 md:flex-row md:items-center md:space-x-2">
-            <label class="text-sm font-medium text-gray-700 dark:text-gray-300 whitespace-nowrap">기준일</label>
-            <div class="flex flex-col sm:flex-row items-center space-y-2 sm:space-y-0 sm:space-x-2">
+          <div
+            class="flex flex-col space-y-2 md:space-y-0 md:flex-row md:items-center md:space-x-2">
+            <label
+              class="text-sm font-medium text-gray-700 dark:text-gray-300 whitespace-nowrap"
+              >기준일</label
+            >
+            <div
+              class="flex flex-col sm:flex-row items-center space-y-2 sm:space-y-0 sm:space-x-2">
               <input
                 type="date"
                 v-model="dateRange.start"
@@ -69,8 +102,12 @@
           </div>
 
           <!-- 접수 구분 -->
-          <div class="flex flex-col space-y-2 md:space-y-0 md:flex-row md:items-center md:space-x-2">
-            <label class="text-sm font-medium text-gray-700 dark:text-gray-300 whitespace-nowrap">접수구분</label>
+          <div
+            class="flex flex-col space-y-2 md:space-y-0 md:flex-row md:items-center md:space-x-2">
+            <label
+              class="text-sm font-medium text-gray-700 dark:text-gray-300 whitespace-nowrap"
+              >접수구분</label
+            >
             <select
               v-model="serviceType"
               class="w-full sm:w-auto px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 bg-white dark:bg-gray-700 text-gray-900 dark:text-white">
@@ -82,8 +119,12 @@
           </div>
 
           <!-- 접수 상태 -->
-          <div class="flex flex-col space-y-2 md:space-y-0 md:flex-row md:items-center md:space-x-2">
-            <label class="text-sm font-medium text-gray-700 dark:text-gray-300 whitespace-nowrap">접수상태</label>
+          <div
+            class="flex flex-col space-y-2 md:space-y-0 md:flex-row md:items-center md:space-x-2">
+            <label
+              class="text-sm font-medium text-gray-700 dark:text-gray-300 whitespace-nowrap"
+              >접수상태</label
+            >
             <select
               v-model="receiptStatus"
               class="w-full sm:w-auto px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 bg-white dark:bg-gray-700 text-gray-900 dark:text-white">
@@ -136,16 +177,20 @@
             :key="reservation.id"
             class="bg-white dark:bg-gray-800 divide-y divide-gray-200 dark:divide-gray-700">
             <tr class="hover:bg-gray-50 dark:hover:bg-gray-700">
-              <td class="px-4 md:px-6 py-4 whitespace-nowrap text-sm text-gray-900 dark:text-gray-300">
+              <td
+                class="px-4 md:px-6 py-4 whitespace-nowrap text-sm text-gray-900 dark:text-gray-300">
                 {{ reservation.id }}
               </td>
-              <td class="px-4 md:px-6 py-4 whitespace-nowrap text-sm text-gray-900 dark:text-gray-300">
+              <td
+                class="px-4 md:px-6 py-4 whitespace-nowrap text-sm text-gray-900 dark:text-gray-300">
                 {{ reservation.customerName }}
               </td>
-              <td class="px-4 md:px-6 py-4 whitespace-nowrap text-sm text-gray-900 dark:text-gray-300">
+              <td
+                class="px-4 md:px-6 py-4 whitespace-nowrap text-sm text-gray-900 dark:text-gray-300">
                 {{ reservation.type }}
               </td>
-              <td class="px-4 md:px-6 py-4 whitespace-nowrap text-sm text-gray-900 dark:text-gray-300">
+              <td
+                class="px-4 md:px-6 py-4 whitespace-nowrap text-sm text-gray-900 dark:text-gray-300">
                 {{ formatDate(reservation.date) }}
               </td>
               <td class="px-4 md:px-6 py-4 whitespace-nowrap">
@@ -155,10 +200,12 @@
                   {{ reservation.status }}
                 </span>
               </td>
-              <td class="px-4 md:px-6 py-4 whitespace-nowrap text-sm text-gray-900 dark:text-gray-300">
+              <td
+                class="px-4 md:px-6 py-4 whitespace-nowrap text-sm text-gray-900 dark:text-gray-300">
                 {{ reservation.worker }}
               </td>
-              <td class="px-4 md:px-6 py-4 whitespace-nowrap text-sm font-medium">
+              <td
+                class="px-4 md:px-6 py-4 whitespace-nowrap text-sm font-medium">
                 <button
                   @click="showReservationDetails(reservation)"
                   class="text-indigo-600 dark:text-indigo-400 hover:text-indigo-900 dark:hover:text-indigo-300 mr-3">
@@ -189,18 +236,27 @@
           </button>
         </div>
         <!-- 페이지네이션 데스크탑 -->
-        <div class="hidden sm:flex-1 sm:flex sm:items-center sm:justify-between">
+        <div
+          class="hidden sm:flex-1 sm:flex sm:items-center sm:justify-between">
           <div>
             <p class="text-sm text-gray-700 dark:text-gray-300">
               총
               <span class="font-medium">{{ filteredReservaions.length }}</span
-              >개 중 <span class="font-medium">{{ (currentPage - 1) * itemsPerPage + 1 }}</span
-              >- <span class="font-medium">{{ Math.min(currentPage * itemsPerPage, filteredReservaions.length) }}</span
+              >개 중
+              <span class="font-medium">{{
+                (currentPage - 1) * itemsPerPage + 1
+              }}</span
+              >-
+              <span class="font-medium">{{
+                Math.min(currentPage * itemsPerPage, filteredReservaions.length)
+              }}</span
               >개 표시
             </p>
           </div>
           <div>
-            <nav class="relative z-0 inline-flex rounded-md shadow-sm -space-x-px" aria-label="Pagination">
+            <nav
+              class="relative z-0 inline-flex rounded-md shadow-sm -space-x-px"
+              aria-label="Pagination">
               <button
                 @click="prevPage"
                 :disabled="currentPage === 1"
@@ -236,7 +292,9 @@
     <!-- 기사 현황 -->
     <div class="bg-white dark:bg-gray-800 rounded-lg shadow">
       <div class="p-4 border-b border-gray-200 dark:border-gray-700">
-        <h2 class="text-lg font-semibold text-gray-800 dark:text-white">기사 현황</h2>
+        <h2 class="text-lg font-semibold text-gray-800 dark:text-white">
+          기사 현황
+        </h2>
       </div>
       <div class="overflow-x-auto">
         <table class="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
@@ -277,16 +335,20 @@
             :key="worker.id"
             class="bg-white dark:bg-gray-800 divide-y divide-gray-200 dark:divide-gray-700">
             <tr class="hover:bg-gray-50 dark:hover:bg-gray-700">
-              <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900 dark:text-gray-300">
+              <td
+                class="px-6 py-4 whitespace-nowrap text-sm text-gray-900 dark:text-gray-300">
                 {{ worker.id }}
               </td>
-              <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900 dark:text-gray-300">
+              <td
+                class="px-6 py-4 whitespace-nowrap text-sm text-gray-900 dark:text-gray-300">
                 {{ worker.name }}
               </td>
-              <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900 dark:text-gray-300">
+              <td
+                class="px-6 py-4 whitespace-nowrap text-sm text-gray-900 dark:text-gray-300">
                 {{ worker.phone }}
               </td>
-              <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900 dark:text-gray-300">
+              <td
+                class="px-6 py-4 whitespace-nowrap text-sm text-gray-900 dark:text-gray-300">
                 {{ worker.rating }}
               </td>
               <td class="px-6 py-4 whitespace-nowrap">
@@ -296,7 +358,8 @@
                   {{ worker.status }}
                 </span>
               </td>
-              <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900 dark:text-gray-300">
+              <td
+                class="px-6 py-4 whitespace-nowrap text-sm text-gray-900 dark:text-gray-300">
                 {{ worker.reservations }}
               </td>
               <td class="px-6 py-4 whitespace-nowrap text-sm font-medium">
@@ -312,7 +375,13 @@
                       ? 'text-red-600 dark:text-red-400 hover:text-red-900 dark:hover:text-red-300'
                       : 'text-green-600 dark:text-green-400 hover:text-green-900 dark:hover:text-green-300',
                   ]">
-                  <i :class="worker.status === '활동중' ? 'fa-solid fa-ban' : 'fa-solid fa-check'" class="mr-1"></i>
+                  <i
+                    :class="
+                      worker.status === '활동중'
+                        ? 'fa-solid fa-ban'
+                        : 'fa-solid fa-check'
+                    "
+                    class="mr-1"></i>
                   {{ worker.status === "활동중" ? "비활성화" : "활성화" }}
                 </button>
               </td>
@@ -326,7 +395,9 @@
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
       <!-- 차트 -->
       <div class="bg-white dark:bg-gray-800 rounded-lg shadow p-6">
-        <h2 class="text-lg font-semibold text-gray-800 dark:text-white mb-4">예약 추이</h2>
+        <h2 class="text-lg font-semibold text-gray-800 dark:text-white mb-4">
+          예약 추이
+        </h2>
         <div class="h-64">
           <Chart />
         </div>
@@ -334,7 +405,9 @@
 
       <!-- 최근 예약 -->
       <div class="bg-white dark:bg-gray-800 rounded-lg shadow p-6">
-        <h2 class="text-lg font-semibold text-gray-800 dark:text-white mb-4">최근 예약</h2>
+        <h2 class="text-lg font-semibold text-gray-800 dark:text-white mb-4">
+          최근 예약
+        </h2>
         <div class="space-y-4">
           <div
             v-for="reservation in recentReservations"
@@ -348,7 +421,9 @@
                 {{ reservation.date }}
               </p>
             </div>
-            <span :class="getStatusClass(reservation.status)" class="px-2 py-1 text-xs font-semibold rounded-full">
+            <span
+              :class="getStatusClass(reservation.status)"
+              class="px-2 py-1 text-xs font-semibold rounded-full">
               {{ reservation.status }}
             </span>
           </div>
@@ -366,8 +441,12 @@
       @click.stop>
       <div class="p-6 border-b border-gray-200 dark:border-gray-700">
         <div class="flex justify-between items-center">
-          <h3 class="text-lg font-medium text-gray-900 dark:text-white">예약 상세 정보</h3>
-          <button @click="closeModal" class="text-gray-400 hover:text-gray-500 dark:hover:text-gray-300">
+          <h3 class="text-lg font-medium text-gray-900 dark:text-white">
+            예약 상세 정보
+          </h3>
+          <button
+            @click="closeModal"
+            class="text-gray-400 hover:text-gray-500 dark:hover:text-gray-300">
             <i class="fas fa-times"></i>
           </button>
         </div>
@@ -377,21 +456,35 @@
           <!-- 기본 정보 -->
           <div class="space-y-6">
             <div>
-              <h4 class="text-sm font-medium text-gray-500 dark:text-gray-400 mb-2">기본 정보</h4>
+              <h4
+                class="text-sm font-medium text-gray-500 dark:text-gray-400 mb-2">
+                기본 정보
+              </h4>
               <div class="space-y-2">
                 <div class="flex items-center">
-                  <label class="w-32 text-sm font-medium text-gray-700 dark:text-gray-300">예약번호</label>
-                  <span class="text-sm text-gray-900 dark:text-white">{{ selectedReservation.id }}</span>
+                  <label
+                    class="w-32 text-sm font-medium text-gray-700 dark:text-gray-300"
+                    >예약번호</label
+                  >
+                  <span class="text-sm text-gray-900 dark:text-white">{{
+                    selectedReservation.id
+                  }}</span>
                 </div>
                 <div class="flex items-center">
-                  <label class="w-32 text-sm font-medium text-gray-700 dark:text-gray-300">고객명</label>
+                  <label
+                    class="w-32 text-sm font-medium text-gray-700 dark:text-gray-300"
+                    >고객명</label
+                  >
                   <input
                     v-model="selectedReservation.customerName"
                     type="text"
                     class="ml-2 px-3 py-1 border border-gray-300 dark:border-gray-600 rounded-md focus:ring-indigo-500 focus:border-indigo-500 bg-white dark:bg-gray-700 text-gray-900 dark:text-white" />
                 </div>
                 <div class="flex items-center">
-                  <label class="w-32 text-sm font-medium text-gray-700 dark:text-gray-300">청소유형</label>
+                  <label
+                    class="w-32 text-sm font-medium text-gray-700 dark:text-gray-300"
+                    >청소유형</label
+                  >
                   <select
                     v-model="selectedReservation.type"
                     class="ml-2 px-3 py-1 border border-gray-300 dark:border-gray-600 rounded-md focus:ring-indigo-500 focus:border-indigo-500 bg-white dark:bg-gray-700 text-gray-900 dark:text-white">
@@ -401,7 +494,10 @@
                   </select>
                 </div>
                 <div class="flex items-center">
-                  <label class="w-32 text-sm font-medium text-gray-700 dark:text-gray-300">예약일시</label>
+                  <label
+                    class="w-32 text-sm font-medium text-gray-700 dark:text-gray-300"
+                    >예약일시</label
+                  >
                   <input
                     v-model="selectedReservation.date"
                     type="datetime-local"
@@ -414,10 +510,16 @@
           <!-- 상태 정보 -->
           <div class="space-y-6">
             <div>
-              <h4 class="text-sm font-medium text-gray-500 dark:text-gray-400 mb-2">상태 정보</h4>
+              <h4
+                class="text-sm font-medium text-gray-500 dark:text-gray-400 mb-2">
+                상태 정보
+              </h4>
               <div class="space-y-2">
                 <div class="flex items-center">
-                  <label class="w-32 text-sm font-medium text-gray-700 dark:text-gray-300">상태</label>
+                  <label
+                    class="w-32 text-sm font-medium text-gray-700 dark:text-gray-300"
+                    >상태</label
+                  >
                   <select
                     v-model="selectedReservation.status"
                     class="ml-2 px-3 py-1 border border-gray-300 dark:border-gray-600 rounded-md focus:ring-indigo-500 focus:border-indigo-500 bg-white dark:bg-gray-700 text-gray-900 dark:text-white">
@@ -427,7 +529,10 @@
                   </select>
                 </div>
                 <div class="flex items-center">
-                  <label class="w-32 text-sm font-medium text-gray-700 dark:text-gray-300">담당기사</label>
+                  <label
+                    class="w-32 text-sm font-medium text-gray-700 dark:text-gray-300"
+                    >담당기사</label
+                  >
                   <select
                     v-model="selectedReservation.worker"
                     class="ml-2 px-3 py-1 border border-gray-300 dark:border-gray-600 rounded-md focus:ring-indigo-500 focus:border-indigo-500 bg-white dark:bg-gray-700 text-gray-900 dark:text-white">
@@ -440,7 +545,10 @@
             </div>
 
             <div>
-              <h4 class="text-sm font-medium text-gray-500 dark:text-gray-400 mb-2">메모</h4>
+              <h4
+                class="text-sm font-medium text-gray-500 dark:text-gray-400 mb-2">
+                메모
+              </h4>
               <textarea
                 v-model="selectedReservation.memo"
                 rows="3"
@@ -450,7 +558,8 @@
           </div>
         </div>
       </div>
-      <div class="px-6 py-4 bg-gray-50 dark:bg-gray-700 flex justify-end space-x-3">
+      <div
+        class="px-6 py-4 bg-gray-50 dark:bg-gray-700 flex justify-end space-x-3">
         <button
           @click="closeModal"
           class="px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-md text-sm font-medium text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-600">
@@ -466,14 +575,20 @@
   </div>
 
   <!-- 기사 상세 모달 -->
-  <div v-if="selectedWorker" class="fixed inset-0 bg-gray-500 bg-opacity-75 flex items-center justify-center p-4 z-50">
+  <div
+    v-if="selectedWorker"
+    class="fixed inset-0 bg-gray-500 bg-opacity-75 flex items-center justify-center p-4 z-50">
     <div
       class="bg-white dark:bg-gray-800 rounded-lg shadow-xl max-w-4xl w-full max-h-[90vh] overflow-y-auto"
       @click.stop>
       <div class="p-6 border-b border-gray-200 dark:border-gray-700">
         <div class="flex justify-between items-center">
-          <h3 class="text-lg font-medium text-gray-900 dark:text-white">기사 상세 정보</h3>
-          <button @click="closeWorkerModal" class="text-gray-400 hover:text-gray-500 dark:hover:text-gray-300">
+          <h3 class="text-lg font-medium text-gray-900 dark:text-white">
+            기사 상세 정보
+          </h3>
+          <button
+            @click="closeWorkerModal"
+            class="text-gray-400 hover:text-gray-500 dark:hover:text-gray-300">
             <i class="fa-solid fa-xmark"></i>
           </button>
         </div>
@@ -483,28 +598,45 @@
           <!-- 기본 정보 -->
           <div class="space-y-6">
             <div>
-              <h4 class="text-sm font-medium text-gray-500 dark:text-gray-400 mb-2">기본 정보</h4>
+              <h4
+                class="text-sm font-medium text-gray-500 dark:text-gray-400 mb-2">
+                기본 정보
+              </h4>
               <div class="space-y-2">
                 <div class="flex items-center">
-                  <label class="w-32 text-sm font-medium text-gray-700 dark:text-gray-300">기사ID</label>
-                  <span class="text-sm text-gray-900 dark:text-white">{{ selectedWorker.id }}</span>
+                  <label
+                    class="w-32 text-sm font-medium text-gray-700 dark:text-gray-300"
+                    >기사ID</label
+                  >
+                  <span class="text-sm text-gray-900 dark:text-white">{{
+                    selectedWorker.id
+                  }}</span>
                 </div>
                 <div class="flex items-center">
-                  <label class="w-32 text-sm font-medium text-gray-700 dark:text-gray-300">이름</label>
+                  <label
+                    class="w-32 text-sm font-medium text-gray-700 dark:text-gray-300"
+                    >이름</label
+                  >
                   <input
                     v-model="selectedWorker.name"
                     type="text"
                     class="ml-2 px-3 py-1 border border-gray-300 dark:border-gray-600 rounded-md focus:ring-indigo-500 focus:border-indigo-500 bg-white dark:bg-gray-700 text-gray-900 dark:text-white" />
                 </div>
                 <div class="flex items-center">
-                  <label class="w-32 text-sm font-medium text-gray-700 dark:text-gray-300">연락처</label>
+                  <label
+                    class="w-32 text-sm font-medium text-gray-700 dark:text-gray-300"
+                    >연락처</label
+                  >
                   <input
                     v-model="selectedWorker.phone"
                     type="tel"
                     class="ml-2 px-3 py-1 border border-gray-300 dark:border-gray-600 rounded-md focus:ring-indigo-500 focus:border-indigo-500 bg-white dark:bg-gray-700 text-gray-900 dark:text-white" />
                 </div>
                 <div class="flex items-center">
-                  <label class="w-32 text-sm font-medium text-gray-700 dark:text-gray-300">평점</label>
+                  <label
+                    class="w-32 text-sm font-medium text-gray-700 dark:text-gray-300"
+                    >평점</label
+                  >
                   <input
                     v-model="selectedWorker.rating"
                     type="number"
@@ -514,7 +646,10 @@
                     class="ml-2 px-3 py-1 border border-gray-300 dark:border-gray-600 rounded-md focus:ring-indigo-500 focus:border-indigo-500 bg-white dark:bg-gray-700 text-gray-900 dark:text-white" />
                 </div>
                 <div class="flex items-center">
-                  <label class="w-32 text-sm font-medium text-gray-700 dark:text-gray-300">상태</label>
+                  <label
+                    class="w-32 text-sm font-medium text-gray-700 dark:text-gray-300"
+                    >상태</label
+                  >
                   <select
                     v-model="selectedWorker.status"
                     class="ml-2 px-3 py-1 border border-gray-300 dark:border-gray-600 rounded-md focus:ring-indigo-500 focus:border-indigo-500 bg-white dark:bg-gray-700 text-gray-900 dark:text-white">
@@ -529,14 +664,25 @@
           <!-- 활동 정보 -->
           <div class="space-y-6">
             <div>
-              <h4 class="text-sm font-medium text-gray-500 dark:text-gray-400 mb-2">활동 정보</h4>
+              <h4
+                class="text-sm font-medium text-gray-500 dark:text-gray-400 mb-2">
+                활동 정보
+              </h4>
               <div class="space-y-2">
                 <div class="flex items-center">
-                  <label class="w-32 text-sm font-medium text-gray-700 dark:text-gray-300">담당예약</label>
-                  <span class="text-sm text-gray-900 dark:text-white">{{ selectedWorker.reservations }}</span>
+                  <label
+                    class="w-32 text-sm font-medium text-gray-700 dark:text-gray-300"
+                    >담당예약</label
+                  >
+                  <span class="text-sm text-gray-900 dark:text-white">{{
+                    selectedWorker.reservations
+                  }}</span>
                 </div>
                 <div class="flex items-center">
-                  <label class="w-32 text-sm font-medium text-gray-700 dark:text-gray-300">활동지역</label>
+                  <label
+                    class="w-32 text-sm font-medium text-gray-700 dark:text-gray-300"
+                    >활동지역</label
+                  >
                   <input
                     v-model="selectedWorker.area"
                     type="text"
@@ -546,7 +692,10 @@
             </div>
 
             <div>
-              <h4 class="text-sm font-medium text-gray-500 dark:text-gray-400 mb-2">메모</h4>
+              <h4
+                class="text-sm font-medium text-gray-500 dark:text-gray-400 mb-2">
+                메모
+              </h4>
               <textarea
                 v-model="selectedWorker.memo"
                 rows="3"
@@ -556,7 +705,8 @@
           </div>
         </div>
       </div>
-      <div class="px-6 py-4 bg-gray-50 dark:bg-gray-700 flex justify-end space-x-3">
+      <div
+        class="px-6 py-4 bg-gray-50 dark:bg-gray-700 flex justify-end space-x-3">
         <button
           @click="closeWorkerModal"
           class="px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-md text-sm font-medium text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-600">
@@ -668,12 +818,16 @@ const filteredReservaions = computed(() => {
   }
   // 청소서비스 유형 필터링
   if (serviceType.value !== "all") {
-    result = result.filter((reservation) => reservation.type === serviceType.value);
+    result = result.filter(
+      (reservation) => reservation.type === serviceType.value
+    );
   }
 
   // 접수 상태 필터링
   if (receiptStatus.value !== "all") {
-    result = result.filter((reservation) => reservation.status === receiptStatus.value);
+    result = result.filter(
+      (reservation) => reservation.status === receiptStatus.value
+    );
   }
 
   return result;
@@ -719,7 +873,8 @@ const formatDate = (date) => {
 // 상태 css
 const getStatusClass = (status) => {
   const statusClasses = {
-    예약완료: "bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-300",
+    예약완료:
+      "bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-300",
     진행중: "bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-300",
     대기중: "bg-gray-100 dark:bg-gray-900 text-gray-800 dark:text-gray-300",
     확정: "bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-300",
@@ -727,7 +882,10 @@ const getStatusClass = (status) => {
     취소: "bg-red-100 dark:bg-red-900 text-red-800 dark:text-red-300",
     활동중: "bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-300",
   };
-  return statusClasses[status] || "bg-gray-100 dark:bg-gray-900 text-gray-800 dark:text-gray-300";
+  return (
+    statusClasses[status] ||
+    "bg-gray-100 dark:bg-gray-900 text-gray-800 dark:text-gray-300"
+  );
 };
 
 // 예약관리 상세 모달
@@ -741,11 +899,16 @@ const closeModal = () => {
 // 예약 정보 저장 함수
 const saveReservaton = () => {
   // 입력값 유효성 검사
-  if (!selectedReservation.value.customerName || !selectedReservation.value.date) {
+  if (
+    !selectedReservation.value.customerName ||
+    !selectedReservation.value.date
+  ) {
     alert("고객명과 예약일시는 필수 입력 항목입니다.");
     return;
   }
-  const index = reservations.value.findIndex((r) => r.id === selectedReservation.value.id);
+  const index = reservations.value.findIndex(
+    (r) => r.id === selectedReservation.value.id
+  );
   if (index !== -1) {
     reservations.value[index] = { ...selectedReservation.value };
   }
@@ -781,7 +944,8 @@ const toggleWorkerStatus = (worker) => {
   const index = workers.value.findIndex((w) => w.id === worker.id);
   //   해당기사가 목록에 있으면
   if (index !== -1) {
-    workers.value[index].status = worker.status === "활동중" ? "비활성화" : "활동중";
+    workers.value[index].status =
+      worker.status === "활동중" ? "비활성화" : "활동중";
   }
 };
 // 선택된 기사 정보
@@ -804,7 +968,9 @@ const saveWorker = () => {
     return;
   }
   //   기존기사 목록에서 현재 수정중인 기사의 인덱스를 찾음
-  const index = workers.value.findIndex((w) => w.id === selectedWorker.value.id);
+  const index = workers.value.findIndex(
+    (w) => w.id === selectedWorker.value.id
+  );
   if (index !== -1) {
     workers.value[index] = { ...selectedWorker.value };
   }

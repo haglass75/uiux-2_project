@@ -1,6 +1,6 @@
 <template>
   <div class="w-full min-h-screen bg-gradient-to-b from-blue-600 to-blue-500 flex items-center justify-center px-4">
-    <div class="max-w-sm bg-white rounded-3xl shadow-2xl p-8">
+    <div class=" max-w-sm bg-white rounded-3xl shadow-2xl p-8">
       <!-- 로고 영역 -->
       <div class="text-center mb-8">
         <div class="w-24 h-24 mx-auto mb-4 bg-blue-600 rounded-full flex items-center justify-center">
@@ -11,11 +11,11 @@
       </div>
 
       <!-- 로그인 폼 -->
-      <form @submit.prevent="login" class="space-y-4">
+      <form class="space-y-4">
         <div>
           <label class="block text-sm font-medium text-gray-700 mb-2"> 기사 ID </label>
           <input
-            v-model="workerId"
+         
             type="text"
             placeholder="기사 번호를 입력하세요"
             class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-600 text-lg"
@@ -25,7 +25,7 @@
         <div>
           <label class="block text-sm font-medium text-gray-700 mb-2"> 비밀번호 </label>
           <input
-            v-model="password"
+          
             type="password"
             placeholder="비밀번호를 입력하세요"
             class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-600 text-lg"
@@ -34,7 +34,7 @@
 
         <!-- 자동 로그인 체크박스 -->
         <label class="flex items-center gap-2 text-sm text-gray-600">
-          <input v-model="rememberMe" type="checkbox" class="w-5 h-5 rounded border-gray-300" />
+          <input  type="checkbox" class="w-5 h-5 rounded border-gray-300" />
           자동 로그인
         </label>
 
@@ -56,25 +56,9 @@
 </template>
 
 <script setup>
-import { ref } from "vue";
-import { useRouter } from "vue-router";
 
-const router = useRouter();
-const workerId = ref("");
-const password = ref("");
-const rememberMe = ref(false);
-
-function login() {
-  // 간단한 로그인 체크 (실제로는 API 호출)
-  if (workerId.value && password.value) {
-    alert("로그인 성공! 작업 목록으로 이동합니다.");
-    router.push("/worker/dashboard");
-  } else {
-    alert("기사 ID와 비밀번호를 입력해주세요.");
-  }
-}
 </script>
 
 <style scoped>
-/* 추가 스타일이 필요하면 여기에 작성하세요 */
+
 </style>

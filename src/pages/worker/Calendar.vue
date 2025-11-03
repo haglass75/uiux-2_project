@@ -1,18 +1,22 @@
 <template>
-  <section>
+  <section class="px-4 w-full max-w-[480px] mx-auto">
     <!-- 상단: 월 이동 -->
     <div class="flex items-center justify-between mb-3">
-      <button @click="prevMonth" class="px-3 py-2 rounded-lg bg-gray-100">
+      <button 
+        @click="prevMonth" 
+        class="px-4 py-2 rounded-lg bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 flex-shrink-0 min-w-[60px] text-center">
         이전
       </button>
-      <div class="text-base font-semibold">{{ year }}년 {{ month + 1 }}월</div>
-      <button @click="nextMonth" class="px-3 py-2 rounded-lg bg-gray-100">
+      <div class="text-base font-semibold text-gray-900 dark:text-white flex-1 text-center">{{ year }}년 {{ month + 1 }}월</div>
+      <button 
+        @click="nextMonth" 
+        class="px-4 py-2 rounded-lg bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 flex-shrink-0 min-w-[60px] text-center">
         다음
       </button>
     </div>
 
     <!-- 요일 헤더 -->
-    <div class="grid grid-cols-7 text-center text-xs text-gray-500 mb-1">
+    <div class="grid grid-cols-7 text-center text-xs text-gray-500 dark:text-gray-400 mb-1">
       <div>일</div>
       <div>월</div>
       <div>화</div>
@@ -33,7 +37,7 @@
         <span>{{ d.date.getDate() }}</span>
         <span
           v-if="countByDateKey[d.key]"
-          class="mt-1 text-[10px] px-1.5 py-0.5 rounded-full bg-blue-50 text-blue-700">
+          class="mt-1 text-[10px] px-1.5 py-0.5 rounded-full bg-blue-50 dark:bg-blue-900/50 text-blue-700 dark:text-blue-300">
           {{ countByDateKey[d.key] }}건
         </span>
       </div>
@@ -42,10 +46,10 @@
     <!-- 선택 날짜 일정 리스트 -->
     <div class="mt-4">
       <div class="flex items-center justify-between mb-2">
-        <p class="text-sm text-gray-600">{{ selectedDateLabel }} 일정</p>
+        <p class="text-sm text-gray-600 dark:text-gray-400">{{ selectedDateLabel }} 일정</p>
         <select
           v-model="statusFilter"
-          class="text-sm border rounded-lg px-2 py-1">
+          class="text-sm border border-gray-300 dark:border-gray-600 rounded-lg px-2 py-1 bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100">
           <option value="all">전체</option>
           <option value="scheduled">예약</option>
           <option value="onroute">이동중</option>
@@ -56,7 +60,7 @@
 
       <div
         v-if="filteredJobsOfSelected.length === 0"
-        class="text-center text-gray-500 text-sm py-6">
+        class="text-center text-gray-500 dark:text-gray-400 text-sm py-6">
         일정이 없습니다.
       </div>
 
@@ -64,23 +68,23 @@
         <li
           v-for="job in filteredJobsOfSelected"
           :key="job.id"
-          class="rounded-xl border p-3 bg-white">
+          class="rounded-xl border border-gray-200 dark:border-gray-700 p-3 bg-white dark:bg-gray-800">
           <div class="flex items-start gap-3">
             <div
               class="w-9 h-9 rounded-lg flex items-center justify-center text-xs font-bold"
               :class="
                 job.type === 'luggage'
-                  ? 'bg-purple-100 text-purple-700'
-                  : 'bg-teal-100 text-teal-700'
+                  ? 'bg-purple-100 dark:bg-purple-900/50 text-purple-700 dark:text-purple-300'
+                  : 'bg-teal-100 dark:bg-teal-900/50 text-teal-700 dark:text-teal-300'
               ">
               {{ job.type === "luggage" ? "수" : "제" }}
             </div>
             <div class="flex-1 min-w-0">
-              <p class="text-sm font-semibold truncate">
+              <p class="text-sm font-semibold truncate text-gray-900 dark:text-white">
                 {{ job.customerName }} ·
-                <span class="text-gray-400">{{ job.time }}</span>
+                <span class="text-gray-400 dark:text-gray-500">{{ job.time }}</span>
               </p>
-              <p class="text-xs text-gray-600 truncate">{{ job.address }}</p>
+              <p class="text-xs text-gray-600 dark:text-gray-400 truncate">{{ job.address }}</p>
               <div class="mt-2 flex items-center gap-1.5">
                 <span
                   class="text-[10px] px-1.5 py-0.5 rounded-full"
@@ -223,9 +227,9 @@ function dayClass(d) {
   const isToday = fmtKey(d.date) === fmtKey(today);
   const isSelected = fmtKey(d.date) === fmtKey(selectedDate.value);
   return [
-    d.outside ? "text-gray-400" : "text-gray-900",
-    isToday ? "ring-1 ring-blue-500" : "",
-    isSelected ? "bg-blue-600 text-white" : "bg-white",
+    d.outside ? "text-gray-400 dark:text-gray-600" : "text-gray-900 dark:text-gray-100",
+    isToday ? "ring-1 ring-blue-500 dark:ring-blue-400" : "",
+    isSelected ? "bg-blue-600 dark:bg-blue-500 text-white" : "bg-white dark:bg-gray-800",
   ];
 }
 

@@ -1,13 +1,13 @@
 <template>
-  <section>
+  <section class="w-full max-w-[480px] mx-auto">
     <!-- 필터: 상태별 보기 (큰 버튼, 가로 스크롤) -->
     <div class="px-4 pt-3">
-      <div class="flex gap-2 overflow-auto no-scrollbar">
+      <div class="flex gap-2 overflow-auto ">
         <button
           v-for="label in filterLabels"
           :key="label"
           @click="setFilter(label)"
-          class="px-4 py-2 rounded-full text-sm border shadow-sm active:scale-[0.98]"
+          class="px-4 py-2 rounded-full text-sm border shadow-sm active:scale-[0.98] transition-colors"
           :class="buttonClass(label)"
           :aria-pressed="isActive(label)"
           type="button">
@@ -21,7 +21,7 @@
       <li
         v-for="job in filteredJobs"
         :key="job.id"
-        class="rounded-2xl border border-gray-200 p-4 bg-white shadow-[0_1px_8px_rgba(0,0,0,0.04)] cursor-pointer"
+        class="rounded-2xl border border-gray-200 dark:border-gray-700 p-4 bg-white dark:bg-gray-800 shadow-[0_1px_8px_rgba(0,0,0,0.04)] dark:shadow-[0_1px_8px_rgba(0,0,0,0.2)] cursor-pointer"
         tabindex="0"
         @click="goToWorkDetail(job)">
         <div class="flex items-start gap-3">
@@ -29,22 +29,22 @@
             class="w-11 h-11 rounded-xl flex items-center justify-center text-lg ring-1 ring-black/5"
             :class="
               job.type === 'store'
-                ? 'bg-green-100 text-green-700'
-                : 'bg-blue-100 text-blue-700'
+                ? 'bg-green-100 dark:bg-green-900/50 text-green-700 dark:text-green-300'
+                : 'bg-blue-100 dark:bg-blue-900/50 text-blue-700 dark:text-blue-300'
             "
             :aria-label="job.type === 'store' ? '매장' : '오피스'">
             🏪
           </div>
           <div class="flex-1">
             <p
-              class="font-semibold text-base flex items-center justify-between">
+              class="font-semibold text-base flex items-center justify-between text-gray-900 dark:text-white">
               <span
                 >{{ job.storeName }}
-                <span class="text-gray-400">· {{ job.time }}</span></span
+                <span class="text-gray-400 dark:text-gray-500">· {{ job.time }}</span></span
               >
-              <span class="text-gray-300" aria-hidden>›</span>
+              <span class="text-gray-300 dark:text-gray-600" aria-hidden>›</span>
             </p>
-            <p class="text-sm text-gray-600">{{ job.address }}</p>
+            <p class="text-sm text-gray-600 dark:text-gray-400">{{ job.address }}</p>
             <div class="mt-2 flex items-center gap-2">
               <span
                 class="text-[11px] px-2 py-1 rounded-full font-medium"
@@ -72,7 +72,7 @@
             <div v-if="job.status !== 'done'" class="mt-2">
               <button
                 type="button"
-                class="text-xs px-3 py-1.5 rounded-lg border bg-white active:scale-[0.98]"
+                class="text-xs px-3 py-1.5 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-700 dark:text-gray-300 active:scale-[0.98]"
                 @click.stop="goToWorkDetail(job)">
                 작업 시작
               </button>
@@ -85,7 +85,7 @@
     <!-- 비어있을 때 -->
     <div
       v-if="filteredJobs.length === 0"
-      class="px-4 pb-4 text-center text-sm text-gray-500">
+      class="px-4 pb-4 text-center text-sm text-gray-500 dark:text-gray-400">
       할당된 청소 작업이 없습니다.
     </div>
   </section>
@@ -130,8 +130,8 @@ function isActive(label) {
 }
 function buttonClass(label) {
   return isActive(label)
-    ? "bg-blue-600 text-white border-blue-600"
-    : "bg-white text-gray-700";
+    ? "bg-blue-600 dark:bg-blue-500 text-white border-blue-600 dark:border-blue-500"
+    : "bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 border-gray-300 dark:border-gray-600";
 }
 
 
@@ -175,7 +175,7 @@ function goToWorkDetail(job) {
 </script>
 
 <style scoped>
-.no-scrollbar::-webkit-scrollbar {
+/* .no-scrollbar::-webkit-scrollbar {
   display: none;
 }
 .no-scrollbar {
@@ -194,5 +194,5 @@ function goToWorkDetail(job) {
 }
 .animate-slideUp {
   animation: slideUp 0.18s ease-out;
-}
+} */
 </style>

@@ -1,5 +1,5 @@
 <template>
-  <div class="home">
+  <div class="home dark:bg-black">
     <h1>🏠 예약페이지</h1>
     <router-link to="/review" class="btn">리뷰 보러가기</router-link>
     
