@@ -57,7 +57,7 @@ const routes = [
   },
   // 관리자페이지
   {
-    path: "/admin/login",
+    path: "/admin",
     name: "LoginAdmin",
     component: LoginAdminVue,
   },
